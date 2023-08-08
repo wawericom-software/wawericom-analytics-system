@@ -1,18 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './App/components/About'; // Your main application component
+import home from './App/components/home'; // Example component for a route
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-<div>
-  <p>Hello world</p>
-</div>
-    </>
-  )
-}
-
-export default App
+ReactDOM.render(
+  <Router>
+    <Switch>
+      <Route exact path="/" component={home} />
+      <Route path="/about" component={About} />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
+);

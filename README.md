@@ -1,2 +1,2 @@
 # wawericom analytics system
- Analytics system
+ Analytics system for global consumption
